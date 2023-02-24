@@ -29,3 +29,16 @@ if $CALCULATOR 3 @ 2; then  # If the return code of $PROGRAM is zero (i.e. succe
   echo 'ERROR! An invalid run of the application (3 @ 2) apparently succeeded?!'
   exit 1
 fi
+
+# Test 04: Ensure that subtraction with negative numbers works
+if [[ $($CALCULATOR -1 - -1) -ne 0 ]]; then
+  echo 'ERROR! Subtraction using two negative numbers failed!'
+  exit 1
+fi
+
+# Test 05: Ensure that multiplication with negative numbers yield positive answer
+if [[ $($CALCULATOR -5 "*" -2) -ne 10 ]]; then
+  echo 'ERROR! Multiplication using two negative numbers failed!'
+  exit 1
+fi
+
