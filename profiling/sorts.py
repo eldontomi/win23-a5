@@ -6,7 +6,7 @@ def test_sorted(fn, iters=1000):
         l = [random.randint(0, 100) for i in range(0, random.randint(0, 50))]
         assert fn(l) == sorted(l)
         # print(fn.__name__, fn(l))
-
+@profile
 def insertionsort(array):
 
     for i in range(len(array)):
