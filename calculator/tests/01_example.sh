@@ -38,7 +38,7 @@ fi
 
 # Test 05: Ensure that multiplication with negative numbers yield positive answer
 if [[ $($CALCULATOR -5 "*" -2) -ne 10 ]]; then
-  echo 'ERROR! Multiplication using two negative numbers failed!'
+  echo 'ERROR! Multiplication using multiple negative numbers failed!'
   exit 1
 fi
 
